@@ -1,0 +1,47 @@
+@tailwind components;
+
+@layer components {
+  .shadow-button {
+    --tw-shadow: var(--button-shadow);
+    --tw-shadow-colored: var(--button-shadow);
+  }
+
+  .shadow, .shadow-button {
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+  }
+
+  .button-class {
+    @apply focus-visible:ring-2 focus-visible:ring-blue-300 dark:focus-visible:ring-blue-600 focus-visible:outline-none border border-transparent focus-visible:border-blue-500 leading-none touch-none select-none disabled:opacity-50 disabled:cursor-not-allowed w-auto flex-none
+    border border-black border-opacity-5 hover:border-opacity-10 dark:border-none relative transform-gpu
+    before:hidden dark:before:block before:absolute before:-inset-[1.5px] before:rounded-lg before:border-[.5px] before:border-black/80
+    after:block after:absolute after:-inset-[1px] after:rounded-md after:bg-gradient-to-t after:from-black/5 dark:after:from-black/[0.15] after:opacity-50 hover:after:opacity-100 after:transition-opacity shadow-button
+  }
+
+  .button {
+    @apply inline-flex space-x-2 flex-none items-center justify-center cursor-pointer leading-none transition-all font-semibold px-5 py-2.5 text-sm opacity-100 rounded-md text-gray-700 hover:text-gray-900 bg-white dark:bg-gray-800 dark:text-gray-200 dark:hover:text-white hover:scale-105 button-class
+  }
+
+  .button-sm {
+    @apply text-xs px-3 py-1.5
+  }
+
+  .button-block {
+    @apply w-full
+  }
+
+  .tag {
+    @apply rounded-full inline-flex items-center font-bold py-0.5
+  }
+
+  .select {
+    @apply appearance-none inline-flex px-4 py-0.5 rounded-full ease-in-out m-0 items-center border border-gray-200 dark:border-gray-500 bg-transparent cursor-pointer hover:bg-gray-0 hover:dark:bg-gray-800
+  }
+
+  .link {
+    @apply underline hover:dark:text-primary-200 focus:dark:text-primary-200 hover:text-primary-600 focus:text-primary-600 transition
+  }
+
+  .layout {
+    @apply w-full max-w-screen-lg mx-auto
+  }
+}
